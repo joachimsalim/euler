@@ -3,7 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(fibonacciSequence(1, 2, 4000000))
+	var limit uint
+	limit = 4000000
+	sum := fibonacciSequence(1, 2, limit)
+
+	fmt.Println(sum)
 }
 
 func fibonacciSequence(x uint, y uint, limit uint) uint {
@@ -17,13 +21,13 @@ func fibonacciSequence(x uint, y uint, limit uint) uint {
 		if x >= limit {
 			break
 		}
-		sum += evaluate(x)
+		sum += isEven(x)
 	}
 
 	return sum
 }
 
-func evaluate(x uint) uint {
+func isEven(x uint) uint {
 	if x%2 == 0 {
 		return x
 	}

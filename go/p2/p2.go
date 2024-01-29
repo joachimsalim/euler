@@ -27,9 +27,9 @@ func fibonacciSequenceOfEvens(y uint, x uint, ceiling uint) uint {
 	return z
 }
 
-func isEven(x uint) uint {
-	if x%2 == 0 {
-		return x
+func isEven(y uint) uint {
+	if y%2 == 0 {
+		return y
 	}
 	return 0
 }

@@ -24,9 +24,9 @@ fn fibonacci_sequence_of_evens(b: u32, a: u32, ceiling: u32) -> u32 {
     return z;
 }
 
-fn is_even(x: u32) -> u32 {
-    if x % 2 == 0 {
-        return x;
+fn is_even(y: u32) -> u32 {
+    if y % 2 == 0 {
+        return y;
     }
     return 0;
 }

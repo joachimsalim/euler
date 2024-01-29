@@ -3,20 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	bound := 1000
-	sum := multiplesOfThreeOrFive(bound)
+	ceiling := 1000
+	sum := multiplesOfThreeOrFive(ceiling)
 
 	fmt.Println(sum)
 }
 
-func multiplesOfThreeOrFive(bound int) int {
-	sum := 0
+func multiplesOfThreeOrFive(ceiling int) int {
+	y := 0
 
-	for x := 1; x < bound; x++ {
+	for x := 3; x < ceiling; x++ {
 		if x%3 == 0 || x%5 == 0 {
-			sum += x
+			y += x
 		}
 	}
 
-	return sum
+	return y
 }

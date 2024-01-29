@@ -3,28 +3,28 @@ package main
 import "fmt"
 
 func main() {
-	var limit uint
-	limit = 4000000
-	sum := fibonacciSequence(1, 2, limit)
+	var ceiling uint
+	ceiling = 4000000
+	sum := fibonacciSequenceOfEvens(1, 2, ceiling)
 
 	fmt.Println(sum)
 }
 
-func fibonacciSequence(x uint, y uint, limit uint) uint {
-	var z, sum uint
-	sum = 0
+func fibonacciSequenceOfEvens(y uint, x uint, ceiling uint) uint {
+	var w, z uint
+	z = 0
 
 	for {
-		z = x + y
-		x = y
-		y = z
-		if x >= limit {
+		w = y + x
+		y = x
+		x = w
+		if y >= ceiling {
 			break
 		}
-		sum += isEven(x)
+		z += isEven(y)
 	}
 
-	return sum
+	return z
 }
 
 func isEven(x uint) uint {

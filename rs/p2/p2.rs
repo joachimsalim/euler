@@ -1,27 +1,27 @@
 fn main() {
-    let limit: u32 = 4000000;
-    let sum: u32 = fibonacci_sequence(1, 2, limit);
+    let ceiling: u32 = 4000000;
+    let sum: u32 = fibonacci_sequence_of_evens(1, 2, ceiling);
     
     println!("{}", sum);
 }
 
-fn fibonacci_sequence(a: u32, b: u32, limit: u32) -> u32 {
-    let mut sum: u32 = 0;
-    let mut x: u32 = a;
+fn fibonacci_sequence_of_evens(b: u32, a: u32, ceiling: u32) -> u32 {
+    let mut w: u32;
+    let mut z: u32 = 0;
     let mut y: u32 = b;
-    let mut z: u32;
+    let mut x: u32 = a;
 
-    for _i in 0u32..limit {
-        z = x + y;
-        x = y;
-        y = z;
-        if x >= limit {
+    loop {
+        w = y + x;
+        y = x;
+        x = w;
+        if y >= ceiling {
             break;
         }
-        sum += is_even(x);
+        z += is_even(y);
     }
 
-    return sum;
+    return z;
 }
 
 fn is_even(x: u32) -> u32 {
@@ -30,3 +30,4 @@ fn is_even(x: u32) -> u32 {
     }
     return 0;
 }
+

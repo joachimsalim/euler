@@ -21,6 +21,3 @@ fn evenly_divisible(dividend: i32, divisor: i32) -> bool {
     dividend % divisor == 0
 }
 
-
-// think about the order of arguments of a function with respect to its frame in the stack when called
-

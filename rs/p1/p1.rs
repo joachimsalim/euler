@@ -1,5 +1,5 @@
 fn main() {
-    println!("{}", multiples_of_three_or_five(3, 1000, 0))
+    println!("{}", multiples_of_three_or_five(0, 3, 1000))
 }
 
 fn multiples_of_three_or_five(mut sum: i32, start: i32, end: i32) -> i32 {

@@ -17,7 +17,7 @@ fn product_of_factor(multiplier: i32, factor: i32) -> i32 {
     }
 }
 
-fn is_evenly_divisible(dividend: i32, factor: i32) -> bool {
-    dividend % factor == 0
+fn is_evenly_divisible(dividend: i32, divisor: i32) -> bool {
+    dividend % divisor == 0
 }
 
